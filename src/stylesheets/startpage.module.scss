@@ -1,0 +1,31 @@
+@import "../index.css";
+
+.startPage{
+    background-image: url(../../public/images/darkbg.png);
+    background-position: center;
+    background-size: contain;
+
+}
+
+.bottom{
+    
+    button{
+        transition: all 0.3s ease-in;
+        animation: pulseAnim 1s ease-in infinite alternate ;
+        box-shadow: 0 0 8px var(--yellow-base);
+    }
+
+    button:hover{
+        box-shadow: 0 0 20px var(--yellow-light);
+        cursor: pointer;
+    }
+
+    @keyframes pulseAnim {
+        to{
+            transform: scale(1);
+        }
+        from{
+            transform: scale(1.09);
+        }
+    }
+}

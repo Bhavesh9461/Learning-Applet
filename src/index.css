@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: font-main;
+  src: url(../public/fonts/QGYvz_MVcBeNP4NJtEtq.woff2);
+}
+
+:root {
+  /* Correctness */
+  --correct-base: #219150;
+  --correct-light: #58d98b;
+  --correct-dark: #0d803d;
+
+  /* Wrongness */
+  --wrong-base: #ff6f61;
+  --wrong-light: #ff8f83;
+  --wrong-dark: #d4574c;
+
+  /* Objects & Highlights – Orange */
+  --orange-base: #ff7f3f;
+  --orange-light: #ff9c6a;
+  --orange-dark: #e56529;
+
+  /* Objects & Highlights – Blue */
+  --blue-base: #3498db;
+  --blue-light: #5eb2e7;
+  --blue-dark: #2576b6;
+
+  /* Objects & Highlights – Pink */
+  --pink-base: #ff4d6d;
+  --pink-light: #ff738c;
+  --pink-dark: #d83655;
+
+  /* Objects & Highlights – Purple */
+  --purple-base: #9b59b6;
+  --purple-light: #b77fd0;
+  --purple-dark: #7e3e99;
+
+  /* Objects & Highlights – Aqua */
+  --aqua-base: #1abc9c;
+  --aqua-light: #48d1b6;
+  --aqua-dark: #139a82;
+
+  /* Objects & Highlights – Rose */
+  --rose-base: #e84393;
+  --rose-light: #ef6aa9;
+  --rose-dark: #b8306c;
+
+  /* Objects & Highlights – Yellow */
+  --yellow-base: #ff9f1a;
+  --yellow-light: #ffb84d;
+  --yellow-dark: #d68300;
+
+  /* Buttons / Sliders – Gold */
+  --gold-base: #f1c40f;
+  --gold-light: #f5d54d;
+  --gold-dark: #bfa70b;
+
+  /* Objects & Highlights – Sand */
+  --sand-base: #d2b48c;
+  --sand-light: #dec3a3;
+  --sand-dark: #b9966d;
+
+  /* Objects & Highlights – White */
+  --white-base: #ffffff;
+  --white-light: #ffffff;
+  --white-dark: #d9d9d9;
+}
+
+html {
+  font-family: font-main;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+section {
+  width: 79.5%;
+  background-image: url(../../public/images/darkbg.png);
+  background-position: center;
+  background-size: contain;
+}
