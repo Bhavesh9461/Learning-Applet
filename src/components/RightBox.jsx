@@ -1,11 +1,10 @@
 import React, { useRef, useState } from "react";
 import ButtonBox from "./ButtonBox";
 import style from "../stylesheets/rightbox.module.scss";
-import data from "../data/colorTable";
 
-const RightBox = () => {
-  const [activeRow, setActiveRow] = useState(null);
-  const [status, setStatus] = useState(null); // "correct" | "wrong"
+
+const RightBox = ({data, activeRow, setActiveRow,status,setStatus}) => {
+  
 
 //   console.log(activeRow);
 //   console.log(status);
