@@ -7,7 +7,7 @@ const EndPage = () => {
     const navigate = useNavigate()
 
   return (
-    <section className={`${style.startPage} w-full h-screen bg-blue-900 flex flex-col items-center py-8 text-center gap-18`}>
+    <section className={`${style.startPage} w-full h-screen justify-center bg-blue-900 flex flex-col items-center py-8 text-center gap-18`}>
         <div className="top select-none flex flex-col gap-7">
             <h1 className="text-[var(--yellow-base)] text-7xl font-bold ">Reading Tables!</h1>
             <p className='text-[2.4rem] leading-[3.5rem] '>Great work! <br /> You found all the mistakes! <br /> You have learned how to read data tables.</p>

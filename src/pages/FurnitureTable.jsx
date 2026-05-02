@@ -6,20 +6,77 @@ import BottomBar from "../components/BottomBar";
 
 const FurnitureTable = () => {
   const [activeRow, setActiveRow] = useState(null);
-  const [status, setStatus] = useState(null); // "correct" | "wrong"
+  const [status, setStatus] = useState(null);
+
   return (
-    <section className="w-full h-screen px-1 py-2">
-      <div className="top h-[90%] flex gap-3">
-        <LeftBox data={data} />
-        <RightBox
-          data={data}
-          activeRow={activeRow}
-          status={status}
-          setActiveRow={setActiveRow}
-          setStatus={setStatus}
-        />
+    <section
+      className="
+        w-full min-h-screen
+        px-2 py-2
+        sm:px-3 sm:py-3
+        md:px-4 md:py-4
+        lg:px-5 lg:py-5
+        overflow-hidden
+        flex flex-col justify-between
+      "
+    >
+      {/* TOP AREA */}
+      <div
+        className="
+          w-full
+          flex flex-col
+          gap-3
+
+          h-auto
+
+          md:h-[88vh]
+          md:flex-row
+        "
+      >
+        {/* LEFT BOX */}
+        <div
+          className="
+            w-full
+            md:w-1/2
+            h-auto
+            md:h-full
+            min-h-[280px]
+          "
+        >
+          <LeftBox data={data} />
+        </div>
+
+        {/* RIGHT BOX */}
+        <div
+          className="
+            w-full
+            md:w-1/2
+            h-auto
+            md:h-full
+            min-h-[320px]
+          "
+        >
+          <RightBox
+            data={data}
+            activeRow={activeRow}
+            status={status}
+            setActiveRow={setActiveRow}
+            setStatus={setStatus}
+          />
+        </div>
       </div>
-      <div className="bottom h-[10%]">
+
+      {/* BOTTOM BAR */}
+      <div
+        className="
+          w-full
+          mt-3
+          h-auto
+
+          md:h-[10vh]
+          md:mt-2
+        "
+      >
         <BottomBar
           prevPath={"/tooltable"}
           nextPath={"/shapetable"}
