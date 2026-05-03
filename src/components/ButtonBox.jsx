@@ -22,7 +22,7 @@ const ButtonBox = ({ elem, activeRow, status, onSelect }) => {
           className="
             w-full text-center font-bold leading-tight
 
-            text-[10px]
+            text-[12px]
             xs:text-xs
             sm:text-sm
             md:text-base
@@ -75,8 +75,8 @@ const ButtonBox = ({ elem, activeRow, status, onSelect }) => {
                 block w-full
                 text-center leading-tight font-medium
 
-                text-[9px]
-                xs:text-[10px]
+                text-[11px]
+                xs:text-xs
                 sm:text-xs
                 md:text-sm
                 lg:text-base

@@ -61,8 +61,8 @@ const RightBox = ({
           className="
             font-bold leading-tight
 
-            text-[13px]
-            xs:text-sm
+            text-[15px]
+           
             sm:text-lg
             md:text-xl
             lg:text-[1.55rem]
