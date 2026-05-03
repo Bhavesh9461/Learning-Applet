@@ -11,77 +11,80 @@ const FurnitureTable = () => {
   return (
     <section
       className="
-        w-full min-h-screen
-        px-2 py-2
-        sm:px-3 sm:py-3
-        md:px-4 md:py-4
-        lg:px-5 lg:py-5
+        w-full h-screen
         overflow-hidden
-        flex flex-col justify-between
+
+        px-2 py-2
+        sm:px-4 sm:py-4
+        md:px-5
+        lg:px-6
       "
     >
-      {/* TOP AREA */}
-      <div
-        className="
-          w-full
-          flex flex-col
-          gap-3
+      {/* PAGE WRAPPER */}
+      <div className="h-full flex flex-col overflow-hidden">
 
-          h-auto
-
-          md:h-[88vh]
-          md:flex-row
-        "
-      >
-        {/* LEFT BOX */}
+        {/* TOP AREA */}
         <div
           className="
-            w-full
-            md:w-1/2
-            h-auto
-            md:h-full
-            min-h-[280px]
+            flex-1
+            min-h-0
+            flex flex-col gap-3
+
+            md:gap-4
+            lg:flex-row
           "
         >
-          <LeftBox data={data} />
+          {/* LEFT BOX */}
+          <div
+            className="
+              w-full
+              flex-1
+              min-h-0
+
+              lg:w-1/2
+            "
+          >
+            <LeftBox data={data} />
+          </div>
+
+          {/* RIGHT BOX */}
+          <div
+            className="
+              w-full
+              flex-1
+              min-h-0
+
+              lg:w-1/2
+            "
+          >
+            <RightBox
+              data={data}
+              activeRow={activeRow}
+              status={status}
+              setActiveRow={setActiveRow}
+              setStatus={setStatus}
+            />
+          </div>
         </div>
 
-        {/* RIGHT BOX */}
+        {/* BOTTOM BAR */}
         <div
           className="
-            w-full
-            md:w-1/2
-            h-auto
-            md:h-full
-            min-h-[320px]
+            h-[68px]
+            sm:h-[72px]
+            md:h-[76px]
+            lg:h-[80px]
+
+            shrink-0
+            mt-2
           "
         >
-          <RightBox
-            data={data}
-            activeRow={activeRow}
-            status={status}
-            setActiveRow={setActiveRow}
-            setStatus={setStatus}
+          <BottomBar
+            prevPath={"/tooltable"}
+            nextPath={"/shapetable"}
+            isCorrect={status === "correct"}
           />
         </div>
-      </div>
-
-      {/* BOTTOM BAR */}
-      <div
-        className="
-          w-full
-          mt-3
-          h-auto
-
-          md:h-[10vh]
-          md:mt-2
-        "
-      >
-        <BottomBar
-          prevPath={"/tooltable"}
-          nextPath={"/shapetable"}
-          isCorrect={status === "correct"}
-        />
       </div>
     </section>
   );
